@@ -2,6 +2,8 @@
 
 import firebaseAdmin from "firebase-admin";
 
+import {sanitizeProtectedData} from "../helper/utils.js"
+
 // Initialise the firebase-admin module
 // Refer https://firebase.google.com/docs/database/admin/start/#admin-sdk-authentication for more information
 firebaseAdmin.initializeApp({
@@ -21,7 +23,8 @@ export const fetchData = async (path) => {
     const ref = db.ref(key);
         try{
             const snapshot = await ref.once("value");
-            return snapshot.val();
+            // Return the data returned by Google Firebase after removing the data which is set be invisible
+            return sanitizeProtectedData(snapshot.val());
         }
         catch(errorObject){
             return new Promise((resolve, reject) => {
