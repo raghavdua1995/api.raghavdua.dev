@@ -82,5 +82,7 @@ See [open issues](https://github.com/raghavdua1995/api.raghavdua.dev/issues) for
 
 <!-- LICENSE -->
 ## License
+<img src="https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png">
 
-Distributed under the MIT License. See LICENSE.txt for more information.
+Distributed under the CC BY-NC-ND 4.0 License. See LICENSE.txt for more information.
+
