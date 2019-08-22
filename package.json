@@ -1,0 +1,57 @@
+{
+  "name": "raghavdua.dev-backend-api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "The core infrastructure backend for raghavdua.dev",
+  "homepage": "https://github.com/raghavdua1995/raghavdua.dev-backend-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raghavdua1995/raghavdua.dev-backend-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raghavdua1995/raghavdua.dev-backend-api/issues",
+    "email": "raghav.cse2018@gmail.com"
+  },
+  "engines": {
+    "node": ">=12.8.1",
+    "npm": ">=6.10.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test nodemon --experimental-modules -r dotenv-flow/config index.js",
+    "start": "cross-env NODE_ENV=production node --experimental-modules -r dotenv-flow/config index.js"
+  },
+  "keywords": [
+    "raghavdua.dev",
+    "backend",
+    "rest",
+    "api",
+    "rest-api",
+    "raghavdua.dev-backend-api",
+    "raghavdua.dev-api",
+    "raghavdua.dev-backend",
+    "raghavdua.dev-rest-api"
+  ],
+  "author": {
+    "name": "Raghav Dua",
+    "email": "raghav.cse2018@gmail.com",
+    "url": "https://raghavdua.dev/"
+  },
+  "contributors": [
+    "Raghav Dua <raghav.cse2018@gmail.com> (https://raghavdua.in)"
+  ],
+  "license": "CC-BY-ND-4.0",
+  "dependencies": {
+    "@sentry/node": "^5.6.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cross-env": "^5.2.0",
+    "dotenv-flow": "^3.1.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.3.0",
+    "stringify-entities": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

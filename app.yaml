@@ -1,0 +1,22 @@
+## This is the configuration file for Google App Engine
+# [START runtime]
+runtime: nodejs12
+env: standard
+# [END runtime]
+
+# Temporary setting to keep gcloud from uploading node_modules
+skip_files:
+ - ^node_modules$
+ - ^.git
+ 
+handlers:
+- url: /.*
+  script: IGNORED
+  secure: always
+  http_headers:
+  redirect_http_response_code: 301
+
+env_variables:
+  NODE_ENV: 'production'
+
+service: api.raghavdua.dev
