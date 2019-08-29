@@ -1,1 +1,7 @@
-export default ["General Information", "Skills", "Experience", "Education", "References"];
+export default [
+  'General Information',
+  'Skills',
+  'Experience',
+  'Education',
+  'References',
+];

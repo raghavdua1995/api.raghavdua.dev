@@ -52,6 +52,8 @@
     "stringify-entities": "^2.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-google": "^0.13.0",
     "nodemon": "^1.19.1"
   }
 }
