@@ -15,6 +15,7 @@ import routes from '../../src/routes.js';
 Sentry.init({
   environment: process.env.NODE_ENV,
   dsn: JSON.parse(
+      // eslint-disable-next-line security/detect-non-literal-fs-filename
       fs.readFileSync(path.resolve(process.env.SENTRY_DSN_PATH), 'utf8')
   ).dsn,
 });

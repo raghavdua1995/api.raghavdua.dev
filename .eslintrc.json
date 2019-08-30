@@ -3,8 +3,18 @@
         "es6": true,
         "node": true
     },
+    "plugins": [
+        "promise",
+        "json",
+        "markdown",
+        "optimize-regex",
+        "security",
+        "no-secrets"
+    ],
     "extends": [
-        "google"
+        "google",
+        "plugin:promise/recommended",
+        "plugin:security/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -15,5 +25,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-secrets/no-secrets":"error",
+        "optimize-regex/optimize-regex": "warn"
     }
 }

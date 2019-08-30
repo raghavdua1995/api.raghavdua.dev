@@ -34,7 +34,7 @@ router.get('/data', asyncMiddleware(async (request, response, next) => {
   // Data returned by the fetchData function is stored in an object with keys
   const formattedData = {};
   queryArray.map((key, index) => {
-    formattedData[key] = rawData[index];
+    formattedData[`${key}`] = rawData[`${index}`];
   });
 
   // traverseJSONObject function traverses a JavaScript object and than:

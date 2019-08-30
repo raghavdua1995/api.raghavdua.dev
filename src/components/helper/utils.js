@@ -7,7 +7,7 @@ export const traverseJSONObject = (jsonObj, callback) => {
   if ( jsonObj !== null && typeof jsonObj == 'object' ) {
     Object.entries(jsonObj).forEach(([key, value]) => {
       // Key is either an array index or object key
-      jsonObj[key] = traverseJSONObject(value, callback);
+      jsonObj[`${key}`] = traverseJSONObject(value, callback);
     });
   } else {
     // If jsonObj is not an object than:
@@ -31,7 +31,7 @@ export const sanitizeProtectedData = (jsonObj) => {
       // Otherwise keep traversing further
       Object.entries(jsonObj).forEach(([key, value]) => {
         // Key is either an array index or object key
-        jsonObj[key] = sanitizeProtectedData(value);
+        jsonObj[`${key}`] = sanitizeProtectedData(value);
       });
     }
   }
